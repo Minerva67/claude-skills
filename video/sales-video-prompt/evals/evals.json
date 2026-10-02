@@ -1,0 +1,26 @@
+{
+  "skill_name": "sales-video-prompt",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "exchange-fund-cto",
+      "prompt": "I'm a wealth advisor. My client Sarah is 45, single, CTO at a pre-IPO tech company. She holds about $8M of concentrated company stock with a cost basis around $1M — she knows a single-stock blowup could wipe her out, but selling means a ~$1.6M capital gains hit, so she's frozen. I want to pitch her on contributing the stock to an exchange fund (7-year lockup, diversifies without triggering the gain). Make me a personalized sales video prompt, about 4 minutes, that I can feed to a hybrid video generation engine. Don't mention any specific model or tech stack inside the prompt.",
+      "expected_output": "One complete master video prompt: ~240s, ~6 beats with per-beat seconds summing to target, personalized to Sarah's numbers ($8M, $1M basis, ~$1.6M gain, 7-year lockup), sophisticated-buyer register, engine layers assigned, anchor rule, art system, dense VO per beat, no model/stack names.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "eval_name": "soc2-compliance-saas",
+      "prompt": "we sell SOC 2 compliance automation software. prospect: CTO of a 40-person healthtech startup. they just lost a hospital deal worth ~$400k/yr because they don't have SOC 2, and doing the audit manually would eat their only 2 senior engineers for ~6 months. our platform cuts it to ~6 weeks, costs $30k/yr. make me one complete video prompt (3 minutes) for a hybrid generation engine — needs to feel premium, not SaaS-cheesy. no model names or tech stack in the prompt pls",
+      "expected_output": "One complete master video prompt: ~180s, beats with seconds summing to target, personalized to the prospect's situation ($400k lost deal, 2 engineers x 6 months vs 6 weeks, $30k/yr), premium register for a technical buyer, engine layer assignment, anchor rule, coherent art system, dense VO, no model/stack names.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "dst-1031-landlord",
+      "prompt": "帮我把这个卖点做成视频提示词：客户是70岁的商业地产房东王先生，持有一栋价值$12M的公寓楼，成本基数只有$2M，想退休不想再管物业，但直接卖掉大约要交$2.5M的资本利得税。我们想向他推荐 1031 exchange 换成 DST（Delaware Statutory Trust）份额：递延全部税款、变成完全被动的月度收入、身后子女继承还能拿到 step-up basis 把增值税基本清零。做成5分钟的视频，给混合生成引擎用，要一个完整的prompt，prompt里不要出现具体模型或技术栈。",
+      "expected_output": "One complete master video prompt: ~300s, ~6 beats summing to 300s, personalized to 王先生 ($12M building, $2M basis, ~$2.5M tax, age 70, wants passive retirement, step-up basis for children), HNW register, engine layers, anchor rule, art system, dense VO, no model/stack names.",
+      "files": []
+    }
+  ]
+}
