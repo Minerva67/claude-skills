@@ -33,7 +33,7 @@ for p,n in [(H+"/Library/Application Support/MobileSync/Backup","iPhone 备份")
     else: print(f"  🔒挡住        {n}  → {p}"); out["blocked"].append({"path":p,"note":n})
 
 print("\n=== ① 纯缓存 ===")
-for p in [H+"/Library/Caches", H+"/.npm/_cacache", H+"/.cache"]:
+for p in [H+"/Library/Caches"]:
     if os.path.isdir(p): add("safe",p,"纯缓存,自动重建"); print(f"  {h(du(p)):>7}  {p}")
 chrome=H+"/Library/Application Support/Google/Chrome"
 if os.path.isdir(chrome):
@@ -42,6 +42,14 @@ if os.path.isdir(chrome):
             p=os.path.join(chrome,prof,sub)
             if os.path.isdir(p) and du(p)>50*1024*1024:
                 add("safe",p,"Chrome 缓存,不退登录"); print(f"  {h(du(p)):>7}  Chrome/{prof}/{sub}")
+
+print("\n=== ①b 代码签名克隆堆积(Chrome bug,常是系统数据本体) ===")
+X=subprocess.run(["getconf","DARWIN_USER_TEMP_DIR"],capture_output=True,text=True).stdout.strip().rstrip("/")[:-1]+"X"
+if os.path.isdir(X):
+    for e in os.listdir(X):
+        if e.endswith(".code_sign_clone"):
+            p=os.path.join(X,e); b=du(p)
+            if b>500*1024*1024: add("safe",p,"code_sign_clone 堆积,App 退出后可删(APFS 克隆,实释放<du)"); print(f"  {h(b):>7}  {e}  ({len(os.listdir(p))} 份)")
 
 print("\n=== ② 已删 App 的孤儿数据 ===")
 apps=set()
@@ -57,7 +65,7 @@ if os.path.isdir(AS):
         key=e.lower().replace("com.","").split(".")[-1]
         if e.lower() in apps or key in apps or any(key in a or a in key for a in apps if len(a)>3):
             continue
-        if e in ("Google","Claude","Apple","com.apple.TCC","CrashReporter","Mozilla","Microsoft","AddressBook","CloudDocs"): continue
+        if e.startswith("com.apple") or e in ("MobileSync","Caches","Knowledge","Google","Claude","Apple","com.apple.TCC","CrashReporter","Mozilla","Microsoft","AddressBook","CloudDocs"): continue
         add("ask",p,"App 似乎已不在,请核实后再删"); print(f"  {h(b):>7}  {e}   (未找到同名 App)")
 
 print("\n=== ③ 大镜像(可重建,问一句) ===")
