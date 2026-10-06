@@ -5,6 +5,8 @@
 > 「凶手是 **5300 万张 PNG**。」
 > 「比今年全国高考人数还多。」
 
+![边清理边玩的实时看板](assets/dashboard.png)
+
 这是一个 [Claude Code](https://claude.com/claude-code) Skill。它能帮你把 Mac 塞满的磁盘清干净，**清理过程中还能玩小恐龙喷火烧仙人掌**，仙人掌被烧会惨叫。
 
 ---
