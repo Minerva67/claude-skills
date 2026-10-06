@@ -38,4 +38,4 @@
 | [folder-organizer](https://github.com/Minerva67/folder-organizer) | 整理乱文件夹：查重、读懂、归类、重命名 |
 | [grill-my-work](https://github.com/Minerva67/grill-my-work) | 对自己的工作做结构化追问复盘 |
 | [spec-first-architect](workflow/spec-first-architect) | 写代码前的架构师流程：PRD/原型/现有代码 → 可执行的规划文件 |
-| [mac-disk-cleanup](https://github.com/Minerva67/mac-disk-cleanup) ↗ 独立仓库 | 给整台 Mac 腾磁盘空间：分档清单 + 安全护栏；「系统数据」几千万小文件堆积专项；🦖 边清理边玩的实时游戏看板 |
+| [mac-disk-o](https://github.com/Minerva67/mac-disk-o) ↗ 独立仓库 | 给整台 Mac 腾磁盘空间：分档清单 + 安全护栏；「系统数据」几千万小文件堆积专项；🦖 边清理边玩的实时游戏看板 |
