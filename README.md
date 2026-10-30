@@ -18,7 +18,6 @@
 | Skill | 用途 |
 |---|---|
 | [xhs-ops-playbook](https://github.com/Minerva67/xhs-ops-playbook) | 小红书运营完整打法 |
-| [elsewhere-narrative-style](https://github.com/Minerva67/elsewhere-narrative-style) | 用「别处发生」式叙事写中文创投/科技长文：反讽标题、金句副题 |
 
 ## 视频制作
 
@@ -27,9 +26,6 @@
 | [video-boost](https://github.com/Minerva67/video-boost) | 口播视频增强：原片不动，叠加同步图形层 |
 | [video-lapian](https://github.com/Minerva67/video-lapian) | 广告/宣传片逐秒拉片：镜头表 + 十节分析 |
 | [lapian-to-prompt](https://github.com/Minerva67/lapian-to-prompt) | 把拉片分析转成可直接投喂视频模型的复原 prompt |
-| [ref-film-to-storyboard-prompt](https://github.com/Minerva67/ref-film-to-storyboard-prompt) | 对标片 + 品牌资料 → 可生产的故事板 + 一整段混合模型视频 prompt |
-| [video-prompt-cleaner](https://github.com/Minerva67/video-prompt-cleaner) | 清掉视频 prompt 里的渲染指令，让多模型对比更公平 |
-| [sales-video-prompt](https://github.com/Minerva67/sales-video-prompt) | 把难卖的复杂产品做成给单个客户的个性化销售视频 prompt |
 
 ## AI 工作流 / 效率
 
